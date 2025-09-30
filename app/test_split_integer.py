@@ -18,8 +18,7 @@ def test_difference_between_max_and_min_is_at_most_one() -> None:
 
 
 def test_parts_are_sorted_ascending() -> None:
-    result = split_integer(20, 6)
-    assert result == sorted(result)
+    assert split_integer(20, 6) == sorted(split_integer(20, 6))
 
 
 def test_length_of_result_equals_number_of_parts() -> None:
@@ -39,7 +38,7 @@ def test_element_type_is_int() -> None:
     assert all(isinstance(x, int) for x in split_integer(10, 3))
 
 
-def test_nom_negative_results() -> None:
+def test_all_parts_non_negative() -> None:
     assert all(x >= 0 for x in split_integer(3, 5))
 
 
